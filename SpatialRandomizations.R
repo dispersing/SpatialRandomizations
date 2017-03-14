@@ -28,6 +28,8 @@
 	# 0.1. set working directory
 		wd <- "~/Drive/COOPA_Analysis"
 		grd.wd <- paste0(wd, "/GRDs")
+		save.wd <- paste0(wd, "/Simulations/Data/animal.plant.Rdata")
+		na.wd <- paste0(wd, "/GRDs/NorthAmericaGRDs/na.rast.grd")
 	# 0.2. list of files for each set of variables
 		abiotic.files <- list.files(path = paste0(grd.wd, "/AbioticGRDs"), pattern = ".grd")
 		animal.files <- list.files(path = paste0(grd.wd, "/AnimalGRDs"), pattern = ".grd")
@@ -40,7 +42,7 @@
 		final.columns <- 1221
 		final.raster <- raster(nrow = final.rows, ncol = final.columns, ext = final.extent, crs = final.projection)
 	# 0.4 obtain values for terrestrical north america
-		na.rast <- raster(x = paste0(wd, "/GRDs/NorthAmericaGRDs/na.rast.grd"))
+		na.rast <- raster(x = na.wd)
 		not.nas <- which(!is.na(values(na.rast)))
 		rm(na.rast); gc()
 	# 0.5. set simulation parameters
@@ -197,4 +199,4 @@
 			} # ends plant maps, j
 		} # ends animal maps, i
 		animal.plant <- z.arr
-		save(animal.plant, file = paste0(wd, "/Simulations/Data/animal.plant.Rdata"))
+		save(animal.plant, file = save.wd)
