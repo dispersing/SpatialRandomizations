@@ -7,25 +7,6 @@ There are 4 files in total, 2 pertaining to the simulations and 2 for creating f
 3. PHatFigures.R
 4. PHatFigures_GRF.R
 
-**SpatialRadomizations.R** runs a complete randomization and **PHatFigures.R** 
+**SpatialRadomizations.R** runs a complete randomization and **PHatFigures.R** plots the complete randomization data. Similarly, **SpatialRadomizations_GRF.R** runs a structured randomization (**GRF** refers to the **G**aussian **R**andom **F**ield from the package [RandomFields](https://cran.r-project.org/web/packages/RandomFields/index.html)) and **PHatFigures_GRF.R** plots the structured randomization data.
 
 More detials will come, but the .R files are here for the time being.
-
-.
-+-- _config.yml
-+-- _drafts
-|   +-- begin-with-the-crazy-ideas.textile
-|   +-- on-simplicity-in-technology.markdown
-+-- _includes
-|   +-- footer.html
-|   +-- header.html
-+-- _layouts
-|   +-- default.html
-|   +-- post.html
-+-- _posts
-|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
-+-- _data
-|   +-- members.yml
-+-- _site
-+-- index.html
